@@ -1,5 +1,5 @@
 ---
-name: Check
+name: CLI-transfer
 on:
   push:
 
