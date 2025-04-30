@@ -1,5 +1,5 @@
 ---
-name: omeroCliTransfer
+name: Check
 on:
   push:
 
@@ -16,7 +16,7 @@ jobs:
           output=$(gh run list --jq ' .[] |  select(.status | contains("completed")) | select(.headBranch | contains("main"))' --json headBranch,conclusion,status,createdAt,url  -R $OWNER/$REPO --limit 1)
           status=success
           if [ -n "$output" ]; then
-              status=$("$output" | jq -r '.conclusion')
+              status=$(echo "$output" | jq -r '.conclusion')
           fi
           if [[ "$status" != "success" ]]; then
              exit 1
