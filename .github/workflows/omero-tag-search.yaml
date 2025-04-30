@@ -1,0 +1,19 @@
+---
+name: Tag-search
+on:
+  push:
+
+jobs:
+  pass-input-to-action:
+    name: Check status
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check status of the last run
+        uses: ./.github/actions/check-status
+        with:
+          owner: German-BioImaging
+          repo: omero-tagsearch
+          branch: master
