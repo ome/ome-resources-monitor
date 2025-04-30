@@ -1,0 +1,23 @@
+---
+name: omeroCliTransfer
+on:
+  push:
+
+jobs:
+  check:
+    name: Check status
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check status of the last run
+        run: |
+          output=$(gh run list --jq ' .[] |  select(.status | contains("completed")) | select(.headBranch | contains("main"))' --json headBranch,conclusion,status,event,createdAt,url  -R ome/omero-cli-transfer --limit 1)
+          status=success
+          if [ -n "$output" ]; then
+              status=$("$output" | jq -r '.conclusion')
+          fi
+          if [[ "$status" != "success" ]]; then
+             exit 1
+          fi
