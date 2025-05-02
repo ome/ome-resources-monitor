@@ -4,11 +4,11 @@
     {
       "repository": "ome/omero-cli-transfer",
       "branch": "main"
-    }
+    },
     {
       "repository": "German-BioImaging/omero-tagsearch",
       "branch": "master"
-    }
+    },
     {
       "repository": "TheJacksonLaboratory/ezomero",
       "branch": "main"

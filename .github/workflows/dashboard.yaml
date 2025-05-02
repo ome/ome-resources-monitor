@@ -42,7 +42,7 @@ jobs:
           g = Github(os.environ['GITHUB_TOKEN'])
 
           # Prepare the dashboard content
-          dashboard = "# CI/CD Dashboard\n\n"
+          dashboard = "# Dashboard\n\n"
           dashboard += "| Repository | Workflow | Status | Last Run |\n"
           dashboard += "| ---------- | -------- | ------ | -------- |\n"
           
