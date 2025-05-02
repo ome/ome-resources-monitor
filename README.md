@@ -1,10 +1,10 @@
-# ome-resources-monitor
+# CI/CD Dashboard
 
-This repository check the status of various external repositories
+| Repository | Workflow | Status | Last Run |
+| ---------- | -------- | ------ | -------- |
+| [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | OMERO | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-05-02 14:30:37 |
+| [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | Release to PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2024-09-14 19:16:22 |
+| [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | Release to Test PyPI | ![Failure](https://img.shields.io/badge/Failure-red) | 2024-09-14 19:16:22 |
 
-Repository | Status
------------| ------
-[omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | [![Actions Status](https://github.com/jburel/ome-resources-monitor/workflows/CLI-transfer/badge.svg)](https://github.com/jburel/ome-resources-monitor/actions)
-[ezomero](https://github.com/TheJacksonLaboratory/ezomero.git) | [![Actions Status](https://github.com/jburel/ome-resources-monitor/workflows/Ezomero/badge.svg)](https://github.com/jburel/ome-resources-monitor/actions)
-[OMERO.tagsearch](https://github.com/German-BioImaging/omero-tagsearch.git) | [![Actions Status](https://github.com/jburel/ome-resources-monitor/workflows/Tag-search/badge.svg)](https://github.com/jburel/ome-resources-monitor/actions)
-[Bio-Formats repo](https://github.com/ome/bio-formats.git) | [![Actions Status](https://github.com/jburel/ome-resources-monitor/workflows/Bio-formats-repo/badge.svg)](https://github.com/jburel/ome-resources-monitor/actions)
+
+*Last updated: 2025-05-02 16:00:16*
