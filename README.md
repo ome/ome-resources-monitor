@@ -7,4 +7,4 @@
 | [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | Release to Test PyPI | ![Failure](https://img.shields.io/badge/Failure-red) | 2024-09-14 19:16:22 |
 
 
-*Last updated: 2025-05-02 16:00:16*
+*Last updated: 2025-05-02 17:04:30*
