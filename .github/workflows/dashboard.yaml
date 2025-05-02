@@ -47,11 +47,15 @@ jobs:
           dashboard += "| Repository | Workflow | Status | Last Run |\n"
           dashboard += "| ---------- | -------- | ------ | -------- |\n"
           
-          for value in repositories:
-              repo = g.get_repo(value)
+          # read the repositories
+          with open("list_repos.json", 'r') as file:
+            data = json.load(file)
+          entries = data["@graph"]
+          for entry in repositories:
+              repo = g.get_repo(entry["repository"])
               workflows = repo.get_workflows()
               for workflow in workflows:
-                  runs = workflow.get_runs(status='completed', branch='main')
+                  runs = workflow.get_runs(status='completed', branch=entry["branch"])
                   if runs.totalCount > 0:
                       latest_run = runs[0]
                       status = latest_run.conclusion.lower()
