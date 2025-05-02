@@ -78,8 +78,8 @@ jobs:
           dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
 
           # Update the README.md file
-          repo = g.get_repo("jburel/.github")
-          contents = repo.get_contents("profile/README.md")
+          repo = g.get_repo("jburel/ome-resources-monitor")
+          contents = repo.get_contents("README.md")
           repo.update_file(contents.path, "Update dashboard", dashboard, contents.sha)
 
           print("Dashboard updated successfully!")
