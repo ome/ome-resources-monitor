@@ -65,8 +65,10 @@ jobs:
                   # restrict to the specified workflows if set
                   if len(values) != 0 and workflow.name not in values:
                       continue
-
-                  runs = workflow.get_runs(status='completed', branch=entry["branch"])
+                  set_branch = entry.get("branch")
+                  if len(set_branch) == 0:
+                      set_branch = "main"
+                  runs = workflow.get_runs(status='completed', branch=set_branch)
                   if runs.totalCount > 0:
                       latest_run = runs[0]
                       status = latest_run.conclusion.lower()
