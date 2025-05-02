@@ -45,8 +45,9 @@ jobs:
           org = g.get_organization("ome")
 
           # Get all repositories in the organization
-          repos = org.get_repos()
-          #repos = ["ome/omero-cli-transfer"]
+          repo = org.get_repo("omero-cli-transfer")
+          repos = []
+          repos.append(repo)
           # Prepare the dashboard content
           dashboard = "# CI/CD Dashboard\n\n"
           dashboard += "| Repository | Workflow | Status | Last Run |\n"
