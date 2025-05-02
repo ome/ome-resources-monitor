@@ -69,8 +69,8 @@ jobs:
                       
                       # Format last run date
                       last_run = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
-                      
-                      dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} |\n"
+                      if not latest_run.head_branch:
+                          dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} |\n"
           
           # Add update timestamp
           dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
