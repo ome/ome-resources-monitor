@@ -12,7 +12,7 @@
     {
       "repository": "TheJacksonLaboratory/ezomero",
       "branch": "main",
-      "workflows": "Run Tests on push,Sphinx docs to gh-pages"
+      "workflows": "Run Tests on push"
     }
   ]
 }
