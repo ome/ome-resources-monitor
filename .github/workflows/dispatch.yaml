@@ -1,0 +1,28 @@
+name: Dispatch
+
+on:
+  push:
+    branches:
+      - main
+  #  types: [closed]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: ['jburel/omero-cli-transfer']
+    env:
+      event_dispatch: ome-resources-monitoring
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      # yamllint disable rule:line-length
+      - name: Dispatch event
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          #token: ${{ secrets.ACTION_API_TOKEN }}
+          event-type: ${{ env.event_dispatch }}
+          repository: ${{ matrix.repo }}
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.event.pull_request.head.sha }}", "repo": "${{ github.repository }}", "owner": "${{github.repository_owner}}", "number": "${{github.event.number}}"}'
