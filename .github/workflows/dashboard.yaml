@@ -34,6 +34,7 @@ jobs:
         run: |
           python - <<EOF
           import os
+          import json
           from github import Github
           from datetime import datetime
 
