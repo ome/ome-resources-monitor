@@ -57,7 +57,8 @@ jobs:
               # Check if the "workflows" entry is set
               value = entry.get("workflows")
               if value is not None:
-                  values = value.split(",")
+                  dirty_values = value.split(",")
+                  values = [item.lstrip() for item in dirty_values]
 
               
               for workflow in workflows:
