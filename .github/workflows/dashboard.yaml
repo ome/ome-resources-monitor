@@ -53,7 +53,19 @@ jobs:
           for entry in entries:
               repo = g.get_repo(entry["repository"])
               workflows = repo.get_workflows()
+              values = []
+              # Check if the "workflows" entry is set
+              value = entry.get("workflows")
+              if value is not None:
+                  values = value.split(",")
+
+              
               for workflow in workflows:
+                  print(workflow.name)
+                  # restrict to the specified workflows if set
+                  if len(values) != 0 and workflow.name not in values:
+                      continue
+
                   runs = workflow.get_runs(status='completed', branch=entry["branch"])
                   if runs.totalCount > 0:
                       latest_run = runs[0]
@@ -68,9 +80,9 @@ jobs:
                           badge = f"![{status.capitalize()}](https://img.shields.io/badge/{status.capitalize()}-yellow)"
                       
                       # Format last run date
+                      print(workflow.name)
                       last_run = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
-                      if not latest_run.head_branch:
-                          dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} |\n"
+                      dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} |\n"
           
           # Add update timestamp
           dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
