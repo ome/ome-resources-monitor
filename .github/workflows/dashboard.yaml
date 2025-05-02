@@ -41,8 +41,6 @@ jobs:
           # Initialize GitHub client
           g = Github(os.environ['GITHUB_TOKEN'])
 
-          # Get all repositories in the organization
-          repositories = ["ome/omero-cli-transfer"]
           # Prepare the dashboard content
           dashboard = "# CI/CD Dashboard\n\n"
           dashboard += "| Repository | Workflow | Status | Last Run |\n"
@@ -52,7 +50,7 @@ jobs:
           with open("list_repos.json", 'r') as file:
             data = json.load(file)
           entries = data["@graph"]
-          for entry in repositories:
+          for entry in entries:
               repo = g.get_repo(entry["repository"])
               workflows = repo.get_workflows()
               for workflow in workflows:
