@@ -1,0 +1,6 @@
+# Dashboard
+
+This repository monitors the status of several repositories listed in list_repos.json.
+
+| Repository | Workflow | Status | Last Run |
+| ---------- | -------- | ------ | -------- |
