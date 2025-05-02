@@ -66,7 +66,7 @@ jobs:
                   if len(values) != 0 and workflow.name not in values:
                       continue
                   set_branch = entry.get("branch")
-                  if len(set_branch) == 0:
+                  if set_branch is None or len(set_branch) == 0:
                       set_branch = "main"
                   runs = workflow.get_runs(status='completed', branch=set_branch)
                   if runs.totalCount > 0:
