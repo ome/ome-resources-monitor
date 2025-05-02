@@ -10,7 +10,6 @@
     },
     {
       "repository": "TheJacksonLaboratory/ezomero",
-      "branch": "main",
       "workflows": "Run Tests on push"
     }
   ]
