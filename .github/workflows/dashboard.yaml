@@ -51,7 +51,7 @@ jobs:
               repo = g.get_repo(value)
               workflows = repo.get_workflows()
               for workflow in workflows:
-                  runs = workflow.get_runs(status='completed')
+                  runs = workflow.get_runs(status='completed', branch='main')
                   if runs.totalCount > 0:
                       latest_run = runs[0]
                       status = latest_run.conclusion.lower()
