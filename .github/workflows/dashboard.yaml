@@ -42,11 +42,11 @@ jobs:
           g = Github(os.environ['GITHUB_TOKEN'])
           
           # Get the organization
-          #org = g.get_organization("$ORGANIZATION_NAME")
+          org = g.get_organization("ome")
 
           # Get all repositories in the organization
-          #repos = org.get_repos()
-          repos = ["ome/omero-cli-transfer"]
+          repos = org.get_repos()
+          #repos = ["ome/omero-cli-transfer"]
           # Prepare the dashboard content
           dashboard = "# CI/CD Dashboard\n\n"
           dashboard += "| Repository | Workflow | Status | Last Run |\n"
