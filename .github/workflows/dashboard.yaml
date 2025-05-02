@@ -83,7 +83,7 @@ jobs:
                       
                       # Format last run date
                       last_run = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
-                      dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} |\n"
+                      dashboard += f"| [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} | [{latest_run.id}]({latest_run.html_url}) |\n"
           
           # Add update timestamp
           dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
