@@ -2,8 +2,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "repository": "ome/omero-cli-transfer",
-      "branch": "main"
+      "repository": "ome/omero-cli-transfer"
     },
     {
       "repository": "German-BioImaging/omero-tagsearch",
