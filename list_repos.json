@@ -5,8 +5,7 @@
       "repository": "ome/omero-cli-transfer"
     },
     {
-      "repository": "German-BioImaging/omero-tagsearch",
-      "branch": "master"
+      "repository": "German-BioImaging/omero-tagsearch"
     },
     {
       "repository": "TheJacksonLaboratory/ezomero",

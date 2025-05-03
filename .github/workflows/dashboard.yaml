@@ -59,14 +59,12 @@ jobs:
                   dirty_values = value.split(",")
                   values = [item.lstrip() for item in dirty_values]
 
+              set_branch = repo.default_branch
               for workflow in workflows:
 
                   # restrict to the specified workflows if set
                   if len(values) != 0 and workflow.name not in values:
                       continue
-                  set_branch = entry.get("branch")
-                  if set_branch is None or len(set_branch) == 0:
-                      set_branch = "main"
                   runs = workflow.get_runs(status='completed', branch=set_branch)
                   if runs.totalCount > 0:
                       latest_run = runs[0]
