@@ -46,7 +46,7 @@ jobs:
               dashboard = file.read()
 
           # Read the repositories
-          with open("list_repos.json", 'r') as file:
+          with open("repositories.json", 'r') as file:
             data = json.load(file)
           entries = data["@graph"]
           for entry in entries:
