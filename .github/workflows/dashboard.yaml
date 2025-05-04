@@ -49,6 +49,7 @@ jobs:
           with open("repositories.json", 'r') as file:
             data = json.load(file)
           entries = data["@graph"]
+
           for entry in entries:
               repo = g.get_repo(entry["repository"])
               workflows = repo.get_workflows()
@@ -80,8 +81,9 @@ jobs:
                       
                       # Format last run date
                       last_run = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
-                      dashboard += f"| {repo.owner.login} | [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} | [{latest_run.id}]({latest_run.html_url}) |\n"
+                      run_text += f"| {repo.owner.login} | [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} | [{latest_run.id}]({latest_run.html_url}) |\n"
           
+          dashboard += run_text
           # Add update timestamp
           dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
 
