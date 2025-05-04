@@ -46,8 +46,7 @@ jobs:
               previous_runs = file.read()
 
           new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d') + ".md"
-
-          previous_runs += "[" + new_run_file + "](" + new_run_file + ")"
+          previous_runs += f"\n[{new_run_file}]({new_run_file})"
 
           new_run_file_text = f"| Owner | Repository | Workflow | Status | Last Run | URL |\n"
           new_run_file_text += f"| ----- | ---------- | -------- | ------ | -------- | --- |\n"
@@ -101,7 +100,8 @@ jobs:
           
           dashboard += run_text
           # Add update timestamp
-          dashboard += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
+          timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+          dashboard += f"\n\n*Last updated: {timestamp}*"
 
           # Update the README.md file
           repo = g.get_repo("jburel/ome-resources-monitor")
@@ -110,6 +110,7 @@ jobs:
 
           # Create log file
           new_run_file_text += run_text
+          new_run_file_text += f"\n\n*Last updated: {timestamp}*"
           repo.create_file('./logs/' + new_run_file, 'Create new log', new_run_file_text)
      
           print("Dashboard updated successfully!")
