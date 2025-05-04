@@ -41,6 +41,22 @@ jobs:
           # Initialize GitHub client
           g = Github(os.environ['GITHUB_TOKEN'])
 
+          # Read the previous runs
+          with open("logs/base_text_logs.txt", "r") as file:
+              previous_runs = file.read()
+
+          new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d') + ".md"
+
+          previous_runs += "[" + new_run_file + "](" + new_run_file + ")"
+
+          new_run_file_text = f"| Owner | Repository | Workflow | Status | Last Run | URL |\n"
+          new_run_file_text += f"| ----- | ---------- | -------- | ------ | -------- | --- |\n"
+
+          # Update the previous.md file
+          repo = g.get_repo("jburel/ome-resources-monitor")
+          contents = repo.get_contents("logs/previous.md")
+          repo.update_file(contents.path, "Add new entries", previous_runs, contents.sha)
+
           # Prepare the dashboard content
           with open("base_text.txt", "r") as file:
               dashboard = file.read()
@@ -49,7 +65,7 @@ jobs:
           with open("repositories.json", 'r') as file:
             data = json.load(file)
           entries = data["@graph"]
-
+          run_text = ""
           for entry in entries:
               repo = g.get_repo(entry["repository"])
               workflows = repo.get_workflows()
@@ -92,6 +108,10 @@ jobs:
           contents = repo.get_contents("README.md")
           repo.update_file(contents.path, "Update dashboard", dashboard, contents.sha)
 
+          # Create log file
+          new_run_file_text += run_text
+          repo.create_file('./logs/' + new_run_file, 'Create new log', new_run_file_text)
+     
           print("Dashboard updated successfully!")
           EOF
 

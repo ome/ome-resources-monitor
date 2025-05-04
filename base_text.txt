@@ -9,6 +9,8 @@ Enter the name of the worklow and separate the names using comma.
 
 Each repository should run a daily build so the status can be kept up-to-date.
 
+[./logs/previous.md]
+
 
 | Owner | Repository | Workflow | Status | Last Run | URL |
 | ----- | ---------- | -------- | ------ | -------- | --- |
