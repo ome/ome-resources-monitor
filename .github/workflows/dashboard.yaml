@@ -141,10 +141,11 @@ jobs:
           try:
               contents = repo.get_contents(value)
               # File exits so we update
+              repo.update_file(contents.path, "Update log", new_run_file_text, contents.sha)
           except UnknownObjectException:
-              # File does not exist so we create it 
+              # File does not exist so we create it
               repo.create_file(value, 'Create new log', new_run_file_text)
-     
+
           print("Dashboard updated successfully!")
           EOF
 
