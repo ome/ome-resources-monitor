@@ -35,7 +35,7 @@ jobs:
           python - <<EOF
           import os
           import json
-          from github import Github
+          from github import Github, UnknownObjectException
           from datetime import datetime
 
           # Initialize GitHub client
@@ -141,7 +141,7 @@ jobs:
           try:
               contents = repo.get_contents(value)
               # File exits so we update
-          except github.UnknownObjectException:
+          except UnknownObjectException:
               # File does not exist so we create it 
               repo.create_file(value, 'Create new log', new_run_file_text)
      
