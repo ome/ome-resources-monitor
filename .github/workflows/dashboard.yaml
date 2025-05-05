@@ -42,7 +42,7 @@ jobs:
           g = Github(os.environ['GITHUB_TOKEN'])
 
           # Prepare file to create
-          new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d_%H_%M_%S') + ".md"
+          new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d') + ".md"
           new_run_file_text = f"| Owner | Repository | Workflow | Status | Last Run | URL |\n"
           new_run_file_text += f"| ----- | ---------- | -------- | ------ | -------- | --- |\n"
 
@@ -130,7 +130,14 @@ jobs:
           # Create log file
           new_run_file_text += run_text
           new_run_file_text += f"\n\n*Last updated: {timestamp}*"
-          repo.create_file('./logs/' + new_run_file, 'Create new log', new_run_file_text)
+          # Check if the file exists
+          value = './logs/' + new_run_file
+          contents = repo.get_contents(value)
+          if contents is None:
+              repo.create_file(value, 'Create new log', new_run_file_text)
+          else:
+              repo.update_file(contents.path, "Update log", new_run_file_text, contents.sha)
+
      
           print("Dashboard updated successfully!")
           EOF
