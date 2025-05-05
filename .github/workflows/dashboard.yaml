@@ -42,7 +42,7 @@ jobs:
           g = Github(os.environ['GITHUB_TOKEN'])
 
           # Prepare file to create
-          new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d') + ".md"
+          new_run_file = "log_" + datetime.now().strftime('%Y_%m_%d_%H_%M_%S') + ".md"
           new_run_file_text = f"| Owner | Repository | Workflow | Status | Last Run | URL |\n"
           new_run_file_text += f"| ----- | ---------- | -------- | ------ | -------- | --- |\n"
 
@@ -61,20 +61,19 @@ jobs:
 
           name = None
           # remove the last entry and delete the log file
-          if len(logs) >= 1:  # max 30 days
+          if len(logs) >= 30:  # max 30 days
               last = logs.pop()
               name = last.split("[")[1].split("]")[0]
+              # delete the log file
+              contents = repo.get_contents("./logs/" + name)
+              repo.delete_file(contents.path, "Remove file", contents.sha)
 
           logs[0:0] = [f"[{new_run_file}]({new_run_file})  "]
           result = new_lines + logs
           previous_runs = "\n".join(result)
-          
+          contents = repo.get_contents("./logs/previous.md")
           repo.update_file(contents.path, "Add new entries", previous_runs, contents.sha)
-
-          if name is not None:
-              # delete the log file
-              contents = repo.get_contents("./logs/" + name)
-              repo.delete_file(contents.path, "Remove file", contents.sha)
+ 
 
           # Prepare the dashboard content
           with open("base_text.txt", "r") as file:
