@@ -138,12 +138,12 @@ jobs:
           new_run_file_text += f"\n\n*Last updated: {timestamp}*"
           # Check if the file exists
           value = './logs/' + new_run_file
-          contents = repo.get_contents(value)
-          if contents is None:
+          try:
+              contents = repo.get_contents(value)
+              # File exits so we update
+          except github.UnknownObjectException:
+              # File does not exist so we create it 
               repo.create_file(value, 'Create new log', new_run_file_text)
-          else:
-              repo.update_file(contents.path, "Update log", new_run_file_text, contents.sha)
-
      
           print("Dashboard updated successfully!")
           EOF
