@@ -61,7 +61,7 @@ jobs:
 
           name = None
           # remove the last entry and delete the log file
-          if len(logs) >= 2:  # max 30 days
+          if len(logs) >= 1:  # max 30 days
               last = logs.pop()
               name = last.split("[")[1].split("]")[0]
 
