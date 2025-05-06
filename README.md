@@ -11,7 +11,7 @@ Each repository should run a daily build so the status can be kept up-to-date.
 
 [Previous runs](./logs/previous.md)
 
-[Latest Run](./logs/log_2025_05_06.md)
 
+[Last Run](./logs/log_2025_05_06.md)
 
-*Last updated: 2025-05-06 03:09:25*
+*Last updated: 2025-05-06 10:01:20*
