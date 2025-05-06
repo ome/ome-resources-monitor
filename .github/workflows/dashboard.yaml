@@ -122,8 +122,7 @@ jobs:
                       last_run = latest_run.created_at.strftime("%Y-%m-%d %H:%M:%S")
                       run_text += f"| {repo.owner.login} | [{repo.name}]({repo.html_url}) | {workflow.name} | {badge} | {last_run} | [{latest_run.id}]({latest_run.html_url}) |\n"
           
-          value = './logs/' + new_run_file
-          dashboard += f"\n[Latest Run]({value})"
+          
           # Add update timestamp
           timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
           dashboard += f"\n\n*Last updated: {timestamp}*"
@@ -136,7 +135,14 @@ jobs:
           # Create log file
           new_run_file_text += run_text
           new_run_file_text += f"\n\n*Last updated: {timestamp}*"
+
+          # Update the latest log file
+          contents = repo.get_contents("./logs/latest.md")
+          repo.update_file(contents.path, "Update latest", new_run_file_text, contents.sha)
+
+
           # Check if the new log file exists
+          value = './logs/' + new_run_file
           try:
               contents = repo.get_contents(value)
               # File exits so we update
