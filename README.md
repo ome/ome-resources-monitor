@@ -1,7 +1,7 @@
 # Dashboard
 
 A nightly job checks the status of the GitHub workflow(s) run against
-the default branch of each repository listed in ``repositories.json``.
+the default branch of each repository listed in ``[repositories.json](repositories.json)``.
 
 If more than one workflow run against the default branch, it is possible
 to check the status of only some workflow(s) by using the ``workflows`` parameter.
@@ -14,4 +14,4 @@ Each repository should run a daily build so the status can be kept up-to-date.
 
 [Last Run](./logs/log_2025_05_06.md)
 
-*Last updated: 2025-05-06 10:01:20*
+*Last updated: 2025-05-06 10:05:32*
