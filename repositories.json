@@ -20,6 +20,6 @@
     },
     {
       "repository": "BioNGFF/ome-zarr.js"
-    },
+    }
   ]
 }
