@@ -5,6 +5,9 @@
       "repository": "ome/omero-cli-transfer"
     },
     {
+      "repository": "German-BioImaging/omero-autotag"
+    },
+    {
       "repository": "German-BioImaging/omero-tagsearch"
     },
     {
