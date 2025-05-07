@@ -17,7 +17,7 @@
     {
       "repository": "fractal-analytics-platform/ngio",
       "workflows": "CI"
-    }
+    },
     {
       "repository": "BioNGFF/ome-zarr.js"
     },
