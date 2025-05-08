@@ -6,6 +6,7 @@
 | TheJacksonLaboratory | [ezomero](https://github.com/TheJacksonLaboratory/ezomero) | Run Tests on push | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-05-07 17:49:44 | [14889918626](https://github.com/TheJacksonLaboratory/ezomero/actions/runs/14889918626) |
 | fractal-analytics-platform | [ngio](https://github.com/fractal-analytics-platform/ngio) | CI | ![Failure](https://img.shields.io/badge/Failure-red) | 2025-05-04 02:02:22 | [14816651011](https://github.com/fractal-analytics-platform/ngio/actions/runs/14816651011) |
 | BioNGFF | [ome-zarr.js](https://github.com/BioNGFF/ome-zarr.js) | Deploy VitePress site to Pages | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-04-04 10:04:17 | [14262943398](https://github.com/BioNGFF/ome-zarr.js/actions/runs/14262943398) |
+| thewtex | [ngff-zarr](https://github.com/thewtex/ngff-zarr) | Test | ![Failure](https://img.shields.io/badge/Failure-red) | 2025-05-06 18:14:25 | [14866763732](https://github.com/thewtex/ngff-zarr/actions/runs/14866763732) |
 
 
-*Last updated: 2025-05-08 03:12:25*
+*Last updated: 2025-05-08 09:17:07*
