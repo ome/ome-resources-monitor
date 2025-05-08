@@ -24,6 +24,9 @@
     {
       "repository": "thewtex/ngff-zarr",
       "workflows": "Test"
+    },
+    {
+      "repository": "glencoesoftware/omero-zarr-pixel-buffer",
     }
   ]
 }
