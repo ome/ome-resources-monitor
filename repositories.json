@@ -20,6 +20,10 @@
     },
     {
       "repository": "BioNGFF/ome-zarr.js"
+    },
+    {
+      "repository": "thewtex/ngff-zarr",
+      "workflows": "Test"
     }
   ]
 }
