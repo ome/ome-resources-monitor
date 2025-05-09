@@ -26,7 +26,8 @@
       "workflows": "Test"
     },
     {
-      "repository": "glencoesoftware/omero-zarr-pixel-buffer"
+      "repository": "glencoesoftware/omero-zarr-pixel-buffer",
+      "workflows": "Gradle"
     }
   ]
 }
