@@ -5,6 +5,10 @@
       "repository": "ome/omero-cli-transfer"
     },
     {
+      "repository": "ome/omero-cli-zarr",
+      "workflows": "OMERO"
+    },
+    {
       "repository": "German-BioImaging/omero-autotag"
     },
     {
