@@ -1,6 +1,6 @@
 | Owner | Repository | Workflow | Status | Last Run | URL |
 | ----- | ---------- | -------- | ------ | -------- | --- |
-| ome | [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | OMERO | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-08-12 01:44:08 | [16896699429](https://github.com/ome/omero-cli-transfer/actions/runs/16896699429) |
+| ome | [omero-cli-transfer](https://github.com/ome/omero-cli-transfer) | OMERO | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-08-13 01:45:59 | [16925288226](https://github.com/ome/omero-cli-transfer/actions/runs/16925288226) |
 | ome | [omero-cli-zarr](https://github.com/ome/omero-cli-zarr) | OMERO | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-08-10 01:54:26 | [16856017548](https://github.com/ome/omero-cli-zarr/actions/runs/16856017548) |
 | German-BioImaging | [omero-autotag](https://github.com/German-BioImaging/omero-autotag) | PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-07 01:09:29 | [16105269976](https://github.com/German-BioImaging/omero-autotag/actions/runs/16105269976) |
 | German-BioImaging | [omero-tagsearch](https://github.com/German-BioImaging/omero-tagsearch) | PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-07 02:03:39 | [16105889204](https://github.com/German-BioImaging/omero-tagsearch/actions/runs/16105889204) |
@@ -11,4 +11,4 @@
 | glencoesoftware | [omero-zarr-pixel-buffer](https://github.com/glencoesoftware/omero-zarr-pixel-buffer) | Gradle | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-06-18 13:11:48 | [15733787770](https://github.com/glencoesoftware/omero-zarr-pixel-buffer/actions/runs/15733787770) |
 
 
-*Last updated: 2025-08-12 03:18:51*
+*Last updated: 2025-08-13 03:21:42*
