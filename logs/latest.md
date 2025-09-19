@@ -6,9 +6,9 @@
 | German-BioImaging | [omero-tagsearch](https://github.com/German-BioImaging/omero-tagsearch) | PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-07 02:03:39 | [16105889204](https://github.com/German-BioImaging/omero-tagsearch/actions/runs/16105889204) |
 | TheJacksonLaboratory | [ezomero](https://github.com/TheJacksonLaboratory/ezomero) | Run Tests on push | ![Failure](https://img.shields.io/badge/Failure-red) | 2025-09-14 00:32:49 | [17704031869](https://github.com/TheJacksonLaboratory/ezomero/actions/runs/17704031869) |
 | BioVisionCenter | [ngio](https://github.com/BioVisionCenter/ngio) | CI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-14 01:51:47 | [17704843528](https://github.com/BioVisionCenter/ngio/actions/runs/17704843528) |
-| BioNGFF | [ome-zarr.js](https://github.com/BioNGFF/ome-zarr.js) | Deploy VitePress site to Pages | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-18 00:36:06 | [17814390203](https://github.com/BioNGFF/ome-zarr.js/actions/runs/17814390203) |
+| BioNGFF | [ome-zarr.js](https://github.com/BioNGFF/ome-zarr.js) | Deploy VitePress site to Pages | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-19 00:37:44 | [17845013156](https://github.com/BioNGFF/ome-zarr.js/actions/runs/17845013156) |
 | fideus-labs | [ngff-zarr](https://github.com/fideus-labs/ngff-zarr) | Test | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-10 22:08:36 | [16207042510](https://github.com/fideus-labs/ngff-zarr/actions/runs/16207042510) |
-| glencoesoftware | [omero-zarr-pixel-buffer](https://github.com/glencoesoftware/omero-zarr-pixel-buffer) | Gradle | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-08 09:01:32 | [17545483102](https://github.com/glencoesoftware/omero-zarr-pixel-buffer/actions/runs/17545483102) |
+| glencoesoftware | [omero-zarr-pixel-buffer](https://github.com/glencoesoftware/omero-zarr-pixel-buffer) | Gradle | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-18 13:29:37 | [17830300570](https://github.com/glencoesoftware/omero-zarr-pixel-buffer/actions/runs/17830300570) |
 
 
-*Last updated: 2025-09-18 02:58:46*
+*Last updated: 2025-09-19 03:01:32*
