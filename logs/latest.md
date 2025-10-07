@@ -5,10 +5,10 @@
 | German-BioImaging | [omero-autotag](https://github.com/German-BioImaging/omero-autotag) | PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-07 01:09:29 | [16105269976](https://github.com/German-BioImaging/omero-autotag/actions/runs/16105269976) |
 | German-BioImaging | [omero-tagsearch](https://github.com/German-BioImaging/omero-tagsearch) | PyPI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-07 02:03:39 | [16105889204](https://github.com/German-BioImaging/omero-tagsearch/actions/runs/16105889204) |
 | TheJacksonLaboratory | [ezomero](https://github.com/TheJacksonLaboratory/ezomero) | Run Tests on push | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-10-05 00:33:57 | [18251528388](https://github.com/TheJacksonLaboratory/ezomero/actions/runs/18251528388) |
-| BioVisionCenter | [ngio](https://github.com/BioVisionCenter/ngio) | CI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-10-05 01:54:53 | [18252358929](https://github.com/BioVisionCenter/ngio/actions/runs/18252358929) |
-| BioNGFF | [ome-zarr.js](https://github.com/BioNGFF/ome-zarr.js) | Deploy VitePress site to Pages | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-10-06 00:38:25 | [18266707737](https://github.com/BioNGFF/ome-zarr.js/actions/runs/18266707737) |
+| BioVisionCenter | [ngio](https://github.com/BioVisionCenter/ngio) | CI | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-10-06 14:45:56 | [18284783730](https://github.com/BioVisionCenter/ngio/actions/runs/18284783730) |
+| BioNGFF | [ome-zarr.js](https://github.com/BioNGFF/ome-zarr.js) | Deploy VitePress site to Pages | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-10-07 00:37:18 | [18298438389](https://github.com/BioNGFF/ome-zarr.js/actions/runs/18298438389) |
 | fideus-labs | [ngff-zarr](https://github.com/fideus-labs/ngff-zarr) | Test | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-07-10 22:08:36 | [16207042510](https://github.com/fideus-labs/ngff-zarr/actions/runs/16207042510) |
 | glencoesoftware | [omero-zarr-pixel-buffer](https://github.com/glencoesoftware/omero-zarr-pixel-buffer) | Gradle | ![Success](https://img.shields.io/badge/Success-brightgreen) | 2025-09-25 15:35:49 | [18012756240](https://github.com/glencoesoftware/omero-zarr-pixel-buffer/actions/runs/18012756240) |
 
 
-*Last updated: 2025-10-06 03:03:17*
+*Last updated: 2025-10-07 02:58:55*
