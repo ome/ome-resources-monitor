@@ -9,6 +9,10 @@
       "workflows": "OMERO"
     },
     {
+      "repository": "ome/ome-zarr-py",
+      "workflows": "Build"
+    },
+    {
       "repository": "German-BioImaging/omero-autotag"
     },
     {
