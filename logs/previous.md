@@ -2,6 +2,7 @@
 
 Find below the list of previous runs
 
+[log_2025_12_04.md](log_2025_12_04.md)  
 [log_2025_12_03.md](log_2025_12_03.md)  
 [log_2025_12_02.md](log_2025_12_02.md)  
 [log_2025_12_01.md](log_2025_12_01.md)  
@@ -31,4 +32,3 @@ Find below the list of previous runs
 [log_2025_11_07.md](log_2025_11_07.md)  
 [log_2025_11_06.md](log_2025_11_06.md)  
 [log_2025_11_05.md](log_2025_11_05.md)  
-[log_2025_11_04.md](log_2025_11_04.md)  
